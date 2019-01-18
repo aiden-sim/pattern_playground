@@ -1,1 +1,1 @@
-"# PatternPlayGround" 
+#소켓 통신을 이용한 Client-Server 구조에서 여러가지 패턴을 사용해서 로직 처리
