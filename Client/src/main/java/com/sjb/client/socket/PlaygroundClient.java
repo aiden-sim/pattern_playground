@@ -1,5 +1,7 @@
 package com.sjb.client.socket;
 
+import com.sjb.common.model.Command;
+
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -9,6 +11,24 @@ public class PlaygroundClient {
     private final static int port = 1986;
 
     public static void main(String[] args) {
+
+        try (Socket socket = new Socket(hostname, port);
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+             BufferedReader bufferReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        ) {
+            Command command = new Command();
+            command.setValue("test");
+            objectOutputStream.writeObject(command);
+            objectOutputStream.flush();
+
+            String returnMessage = bufferReader.readLine();
+            System.out.println("returnMessage : " + returnMessage);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /*
         try (Socket socket = new Socket(hostname, port);
              OutputStream output = socket.getOutputStream();
              PrintWriter writer = new PrintWriter(output, true)) {
@@ -33,5 +53,6 @@ public class PlaygroundClient {
             System.out.println("I/O error: " + ex2.getMessage());
             ex2.printStackTrace();
         }
+        */
     }
 }
