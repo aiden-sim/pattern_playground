@@ -20,6 +20,7 @@ public class ServerThread extends Thread {
              ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream())) {
             Command order = (Command) objectInputStream.readObject();
             System.out.println(order.getValue());
+            // 여기서부터 패턴
 
             printWriter.write("ok");
             printWriter.close();

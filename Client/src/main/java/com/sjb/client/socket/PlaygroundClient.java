@@ -22,7 +22,7 @@ public class PlaygroundClient {
             objectOutputStream.flush();
 
             String returnMessage = bufferReader.readLine();
-            System.out.println("returnMessage : " + returnMessage);
+            System.out.println("return Message : " + returnMessage);
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
