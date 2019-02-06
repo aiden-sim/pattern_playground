@@ -3,16 +3,19 @@ package com.sjb.common.model;
 import java.io.Serializable;
 
 public class Command implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -7687127937206935655L;
+    private CommandType commandType;
 
-    private String value;
-
-    public void setValue(String value) {
-        this.value = value;
+    public Command(CommandType commandType) {
+        this.commandType = commandType;
     }
 
-    public String getValue() {
-        return value;
+    public CommandType getCommandType() {
+        return commandType;
     }
 
+    @Override
+    public String toString() {
+        return commandType.getDesc();
+    }
 }

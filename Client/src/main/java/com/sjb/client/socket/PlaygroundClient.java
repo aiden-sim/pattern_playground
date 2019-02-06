@@ -1,10 +1,15 @@
 package com.sjb.client.socket;
 
 import com.sjb.common.model.Command;
+import com.sjb.common.model.CommandType;
+import com.sjb.common.pattern.iterator.CommandAggregate;
 
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class PlaygroundClient {
     private final static String hostname = "localhost";
@@ -16,9 +21,11 @@ public class PlaygroundClient {
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
              BufferedReader bufferReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         ) {
-            Command command = new Command();
-            command.setValue("test");
-            objectOutputStream.writeObject(command);
+            CommandAggregate aggregate = new CommandAggregate(2);
+            aggregate.appendCommand(new Command(CommandType.REALTIME));
+            aggregate.appendCommand(new Command(CommandType.ANALYSIS));
+
+            objectOutputStream.writeObject(aggregate);
             objectOutputStream.flush();
 
             String returnMessage = bufferReader.readLine();

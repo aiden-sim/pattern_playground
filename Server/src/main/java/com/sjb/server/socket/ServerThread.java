@@ -1,9 +1,13 @@
 package com.sjb.server.socket;
 
 import com.sjb.common.model.Command;
+import com.sjb.common.pattern.iterator.CommandAggregate;
+import com.sjb.common.pattern.iterator.Iterator;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Objects;
 
 public class ServerThread extends Thread {
     private Socket socket;
@@ -18,9 +22,16 @@ public class ServerThread extends Thread {
          */
         try (PrintWriter printWriter = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())));
              ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream())) {
-            Command order = (Command) objectInputStream.readObject();
-            System.out.println(order.getValue());
-            // 여기서부터 패턴
+            CommandAggregate aggregate = (CommandAggregate) objectInputStream.readObject();
+
+            // Iterator 패턴을 사용함으로써 구체적인 구현을 분리시킬 수 있다. ex) Map, List
+            if (!Objects.isNull(aggregate) && !Objects.isNull(aggregate.iterator())) {
+                Iterator iterator = aggregate.iterator();
+                while (iterator.hasNext()) {
+                    Command command = (Command) iterator.next();
+                    System.out.println(command);
+                }
+            }
 
             printWriter.write("ok");
             printWriter.close();
