@@ -35,6 +35,9 @@ public class ServerThread extends Thread {
                     Print print = new PrintCommand(command.getCommandType());
                     print.printWithLogger();
                     print.printWithSout();
+
+                    // Factory Method 패턴을 사용해서 각 Command 수행
+
                 }
             }
 
