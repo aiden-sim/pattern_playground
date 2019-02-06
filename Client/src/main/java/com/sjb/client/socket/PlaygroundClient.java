@@ -4,12 +4,12 @@ import com.sjb.common.model.Command;
 import com.sjb.common.model.CommandType;
 import com.sjb.common.pattern.iterator.CommandAggregate;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class PlaygroundClient {
     private final static String hostname = "localhost";
@@ -35,31 +35,5 @@ public class PlaygroundClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*
-        try (Socket socket = new Socket(hostname, port);
-             OutputStream output = socket.getOutputStream();
-             PrintWriter writer = new PrintWriter(output, true)) {
-
-            String text;
-
-            do {
-                // 랜덤으로 전문 생성 (request)
-                text = "bye2";
-                writer.println(text);
-
-                InputStream input = socket.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                String time = reader.readLine();
-
-                System.out.println(time);
-            } while (!"bye".equals(text));
-        } catch (UnknownHostException ex) {
-            System.out.println("Server not found T.T : " + ex.getMessage());
-            ex.printStackTrace();
-        } catch (IOException ex2) {
-            System.out.println("I/O error: " + ex2.getMessage());
-            ex2.printStackTrace();
-        }
-        */
     }
 }

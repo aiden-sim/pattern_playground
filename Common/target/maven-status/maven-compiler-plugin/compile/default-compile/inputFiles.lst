@@ -1,1 +1,6 @@
 C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\model\Command.java
+C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\pattern\iterator\Aggregate.java
+C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\pattern\iterator\CommandIterator.java
+C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\pattern\iterator\Iterator.java
+C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\pattern\iterator\CommandAggregate.java
+C:\dev\PatternPlayGround\Common\src\main\java\com\sjb\common\model\CommandType.java

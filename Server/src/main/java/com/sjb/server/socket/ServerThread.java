@@ -3,7 +3,8 @@ package com.sjb.server.socket;
 import com.sjb.common.model.Command;
 import com.sjb.common.pattern.iterator.CommandAggregate;
 import com.sjb.common.pattern.iterator.Iterator;
-import org.apache.commons.collections4.CollectionUtils;
+import com.sjb.server.pattern.adapter.Print;
+import com.sjb.server.pattern.adapter.PrintCommand;
 
 import java.io.*;
 import java.net.Socket;
@@ -29,7 +30,11 @@ public class ServerThread extends Thread {
                 Iterator iterator = aggregate.iterator();
                 while (iterator.hasNext()) {
                     Command command = (Command) iterator.next();
-                    System.out.println(command);
+
+                    // 객체(위임) Adapter 패턴을 사용해서 Log 찍음
+                    Print print = new PrintCommand(command.getCommandType());
+                    print.printWithLogger();
+                    print.printWithSout();
                 }
             }
 
@@ -41,27 +46,6 @@ public class ServerThread extends Thread {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-
-        /*
-        try (InputStream input = socket.getInputStream();
-             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-             OutputStream output = socket.getOutputStream();
-             PrintWriter writer = new PrintWriter(output, true)) {
-
-            String text;
-            do {
-                text = reader.readLine();
-                // 여기서 내 코드
-                String reverseText = new StringBuilder(text).reverse().toString();
-                writer.println("Server: " + reverseText);
-
-            } while (!"bye".equals(text));
-            socket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        */
     }
 
 }
