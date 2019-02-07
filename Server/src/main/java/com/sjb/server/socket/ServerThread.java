@@ -33,9 +33,12 @@ public class ServerThread extends Thread {
 					Command command = (Command) iterator.next();
 
 					/**
+					 * Factory를 Singleton 으로 생성
+					 */
+					Factory factory = CommandFactory.getInstance();
+					/**
 					 * Factory Method 패턴을 사용해서 각 Command 수행
 					 */
-					Factory factory = new CommandFactory();
 					Product product = factory.create(command.getCommandType());
 					if (!Objects.isNull(product)) {
 						product.execute(command.getCommandType());
