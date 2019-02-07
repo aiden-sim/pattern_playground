@@ -23,7 +23,7 @@ public abstract class Product {
 	}
 
 	/**
-	 * Teamplte MEthod 패턴 사용
+	 * Teamplte Method 패턴 사용
 	 */
 	public final void execute(CommandType commandType) {
 		log(commandType);
