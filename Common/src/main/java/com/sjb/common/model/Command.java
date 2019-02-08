@@ -16,6 +16,6 @@ public class Command implements Serializable {
 
     @Override
     public String toString() {
-        return commandType.getDesc();
+        return commandType.getName();
     }
 }

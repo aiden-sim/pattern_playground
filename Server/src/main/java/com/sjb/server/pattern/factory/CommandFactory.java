@@ -25,10 +25,14 @@ public class CommandFactory extends Factory {
     @Override
     public Product create(CommandType commandType) {
         switch (commandType) {
-            case ANALYSIS:
-                return new Analysis();
-            case REALTIME:
-                return new RealTime();
+            case ANALYSIS_DATA_STORE:
+                return new AnalysisStore();
+            case REALTIME_DATA_STORE:
+                return new RealTimeStore();
+            case ANALYSIS_DATA_SEARCH:
+                return new AnalysisSearch();
+            case REALTIME_DATA_SEARCH:
+                return new RealTimeSearch();
             default:
                 return null;
         }

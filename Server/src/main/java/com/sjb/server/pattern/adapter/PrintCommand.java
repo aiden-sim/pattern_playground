@@ -9,7 +9,7 @@ public class PrintCommand implements Print {
     private Log log;
 
     public PrintCommand(CommandType commandType) {
-        this.log = new Log(commandType.getDesc());
+        this.log = new Log(commandType.getName());
     }
 
     @Override
