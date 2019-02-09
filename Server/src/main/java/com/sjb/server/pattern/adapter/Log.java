@@ -10,11 +10,11 @@ import org.slf4j.LoggerFactory;
  * <p>
  * ex) slf4j 도 다른 로깅 시스템의 adapter, facade 역할을 한다.
  */
-public class Log {
+public class Log<T> {
     Logger logger = LoggerFactory.getLogger(this.getClass());
-    private String log;
+    private T log;
 
-    public Log(String log) {
+    public Log(T log) {
         this.log = log;
     }
 

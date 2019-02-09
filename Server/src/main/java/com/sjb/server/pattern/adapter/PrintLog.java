@@ -1,15 +1,17 @@
 package com.sjb.server.pattern.adapter;
 
-import com.sjb.common.model.CommandType;
-
 /**
  * Adapter (위임)
  */
-public class PrintCommand implements Print {
+public class PrintLog<T> implements Print {
     private Log log;
 
-    public PrintCommand(CommandType commandType) {
-        this.log = new Log(commandType.getName());
+    public static <T> PrintLog newInstance(T t) {
+        return new PrintLog(t);
+    }
+
+    private PrintLog(T t) {
+        this.log = new Log(t);
     }
 
     @Override
