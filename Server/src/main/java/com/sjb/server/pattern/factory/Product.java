@@ -11,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
+ * Factory Method 패턴
  * Product(제품)
  * 인스턴스가 가져야할 인터페이스(API)를 결정하는 추상 클래스
  */
@@ -31,7 +32,7 @@ public abstract class Product {
     }
 
     /**
-     * Teamplte Method 패턴 사용
+     * Teamplte Method 패턴
      */
     public final void execute(CommandType commandType, String name) {
         log(commandType);

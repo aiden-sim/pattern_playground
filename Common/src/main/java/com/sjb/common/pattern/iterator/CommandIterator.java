@@ -3,6 +3,7 @@ package com.sjb.common.pattern.iterator;
 import com.sjb.common.model.Command;
 
 /**
+ * Iterator 패턴
  * ConcreteIterator(구체적인 반복자)
  * Iterator가 결정한 인터페이스를 실제로 구현
  */

@@ -1,12 +1,9 @@
 package com.sjb.server.pattern.factory;
 
 import com.sjb.common.model.CommandType;
-import com.sjb.server.utility.NameCreator;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
+ * Factory Method 패턴
  * ConcreteCreator(구체적인 작성자)
  */
 public class CommandFactory extends Factory {

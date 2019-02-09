@@ -10,8 +10,6 @@ import com.sjb.server.utility.NameCreator;
 
 import java.io.*;
 import java.net.Socket;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class ServerThread extends Thread {

@@ -1,6 +1,7 @@
 package com.sjb.server.pattern.adapter;
 
 /**
+ * Adapter 패턴
  * Adapter (위임)
  */
 public class PrintLog<T> implements Print {

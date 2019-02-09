@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
+ * Factory Method 패턴
  * ConcreteProduct(구체적인 제품)
  */
 public class RealTimeSearch extends Product {
@@ -20,8 +21,18 @@ public class RealTimeSearch extends Product {
         List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
         if (CollectionUtils.isNotEmpty(userInfoList)) {
             userInfoList.forEach(userInfo -> {
-                Print print = PrintLog.newInstance(userInfo.toString());
-                print.printWithSout();
+                /**
+                 * Prototype 패턴 (ConcretePrototpye, Cliente 는 생략 했다.)
+                 */
+                // 저장 된 데이터를 2차 가공, 이름 뒤에 ~씨를 붙이려고 한다.
+                try {
+                    UserInfo cloneUserInfo = (UserInfo) userInfo.clone();
+                    cloneUserInfo.setName(userInfo.getName() + "씨");
+                    Print print = PrintLog.newInstance(cloneUserInfo.toString());
+                    print.printWithSout();
+                } catch (CloneNotSupportedException e) {
+                    e.printStackTrace();
+                }
             });
         }
     }

@@ -3,6 +3,7 @@ package com.sjb.server.pattern.factory;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
+ * Factory Method 패턴
  * ConcreteProduct(구체적인 제품)
  */
 public class AnalysisStore extends Product {

@@ -5,6 +5,7 @@ import com.sjb.common.model.Command;
 import java.io.Serializable;
 
 /**
+ * Iterator 패턴
  * ConcreteAggregate(구체적인 집합체)
  * Aggregate 역할이 결정한 인터페이스를 실제로 구현하는 일
  */

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Adapter 패턴
  * Adaptee (개조되는 쪽)
  * 제공되고 있는 쪽
  * 이 Class는 기존에 사용되고 있는 라이브러리 역할이고 변경할 수 없다.
