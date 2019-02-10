@@ -1,6 +1,8 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.product;
 
 import com.sjb.server.model.UserInfo;
+import com.sjb.server.pattern.adapter.Print;
+import com.sjb.server.pattern.adapter.PrintLog;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,5 +18,7 @@ public class RealTimeStore extends Product {
     protected void run(String name) {
         String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         realtimeDatabase.computeIfAbsent(nowDt, x -> new ArrayList<>()).add(new UserInfo(name));
+        Print print = PrintLog.newInstance("realtime store : " + nowDt + "_" + name);
+        print.printWithSout();
     }
 }

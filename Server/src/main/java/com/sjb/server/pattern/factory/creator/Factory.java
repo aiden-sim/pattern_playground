@@ -1,6 +1,7 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.creator;
 
 import com.sjb.common.model.CommandType;
+import com.sjb.server.pattern.factory.product.Product;
 
 /**
  * Factory Method 패턴

@@ -1,6 +1,7 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.creator;
 
 import com.sjb.common.model.CommandType;
+import com.sjb.server.pattern.factory.product.*;
 
 /**
  * Factory Method 패턴
@@ -34,8 +35,10 @@ public class CommandFactory extends Factory {
                 return new AnalysisSearch();
             case REALTIME_DATA_SEARCH:
                 return new RealTimeSearch();
-            case PROCESSING_DATA:
-                return new ProcessingData();
+            case PROCESSING_DATA_STORE:
+                return new ProcessingDataStore();
+            case PROCESSING_DATA_SERACH:
+                return new ProcessingDataSearch();
             default:
                 return null;
         }

@@ -3,9 +3,9 @@ package com.sjb.server.socket;
 import com.sjb.common.model.Command;
 import com.sjb.common.pattern.iterator.CommandAggregate;
 import com.sjb.common.pattern.iterator.Iterator;
-import com.sjb.server.pattern.factory.CommandFactory;
-import com.sjb.server.pattern.factory.Factory;
-import com.sjb.server.pattern.factory.Product;
+import com.sjb.server.pattern.factory.creator.CommandFactory;
+import com.sjb.server.pattern.factory.creator.Factory;
+import com.sjb.server.pattern.factory.product.Product;
 import com.sjb.server.utility.NameCreator;
 
 import java.io.*;
@@ -39,8 +39,9 @@ public class ServerThread extends Thread {
                      * Factory를 Singleton 으로 생성
                      */
                     Factory factory = CommandFactory.getInstance();
+
                     /**
-                     * Factory Method 패턴을 사용해서 각 Command 수행
+                     * Factory Method 패턴을 사용해서 각 Command 수행 (Abstract Factory로 개선 여지 있음)
                      */
                     Product product = factory.create(command.getCommandType());
                     if (!Objects.isNull(product)) {

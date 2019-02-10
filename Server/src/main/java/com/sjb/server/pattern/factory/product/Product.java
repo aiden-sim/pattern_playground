@@ -1,4 +1,4 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.product;
 
 import com.sjb.common.model.CommandType;
 import com.sjb.server.model.DetailUserInfo;

@@ -1,4 +1,7 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.product;
+
+import com.sjb.server.pattern.adapter.Print;
+import com.sjb.server.pattern.adapter.PrintLog;
 
 import java.util.concurrent.atomic.LongAdder;
 
@@ -11,5 +14,7 @@ public class AnalysisStore extends Product {
     @Override
     protected void run(String name) {
         analysisDatabase.computeIfAbsent(name, x -> new LongAdder()).increment();
+        Print print = PrintLog.newInstance("analysis store : "  + name);
+        print.printWithSout();
     }
 }

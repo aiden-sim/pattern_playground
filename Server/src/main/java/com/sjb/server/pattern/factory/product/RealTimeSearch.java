@@ -1,4 +1,4 @@
-package com.sjb.server.pattern.factory;
+package com.sjb.server.pattern.factory.product;
 
 import com.sjb.server.model.UserInfo;
 import com.sjb.server.pattern.adapter.Print;

@@ -11,12 +11,34 @@ public class DetailUserInfo {
     private int age;
     private LocalDateTime createDt;
     private Gender gender;
+    private Program program;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public LocalDateTime getCreateDt() {
+        return createDt;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public Program getProgram() {
+        return program;
+    }
 
     public DetailUserInfo(UserInfoBuilder builder) {
         this.name = builder.name;
         this.age = builder.age;
         this.createDt = builder.createDt;
         this.gender = builder.gender;
+        this.program = builder.program;
     }
 
     public static class UserInfoBuilder {
@@ -24,6 +46,7 @@ public class DetailUserInfo {
         private int age;
         private LocalDateTime createDt;
         private Gender gender;
+        private Program program;
 
         public UserInfoBuilder setName(String name) {
             this.name = name;
@@ -42,6 +65,11 @@ public class DetailUserInfo {
 
         public UserInfoBuilder setGender(Gender gender) {
             this.gender = gender;
+            return this;
+        }
+
+        public UserInfoBuilder setProgram(Program program) {
+            this.program = program;
             return this;
         }
 
