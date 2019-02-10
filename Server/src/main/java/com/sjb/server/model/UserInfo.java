@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
  */
 public class UserInfo implements Cloneable {
     private String name;
-    private final LocalDateTime createDt;
+    private LocalDateTime createDt;
 
     public UserInfo(String name) {
         this.name = name;
@@ -25,6 +25,14 @@ public class UserInfo implements Cloneable {
 
     public String getName() {
         return name;
+    }
+
+    public void setCreateDt(LocalDateTime createDt) {
+        this.createDt = createDt;
+    }
+
+    public LocalDateTime getCreateDt() {
+        return createDt;
     }
 
     @Override

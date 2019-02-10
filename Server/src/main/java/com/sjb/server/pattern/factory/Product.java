@@ -1,6 +1,7 @@
 package com.sjb.server.pattern.factory;
 
 import com.sjb.common.model.CommandType;
+import com.sjb.server.model.DetailUserInfo;
 import com.sjb.server.model.UserInfo;
 import com.sjb.server.pattern.adapter.Print;
 import com.sjb.server.pattern.adapter.PrintLog;
@@ -18,6 +19,7 @@ import java.util.concurrent.atomic.LongAdder;
 public abstract class Product {
     protected static Map<String, List<UserInfo>> realtimeDatabase = new ConcurrentHashMap<>();
     protected static Map<String, LongAdder> analysisDatabase = new ConcurrentHashMap<>();
+    protected static Map<String, List<DetailUserInfo>> processingDatabase = new ConcurrentHashMap<>();
 
     protected abstract void run(String name);
 

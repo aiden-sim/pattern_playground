@@ -28,7 +28,7 @@ public class ServerThread extends Thread {
             CommandAggregate aggregate = (CommandAggregate) objectInputStream.readObject();
 
             // store data
-            String name = NameCreator.randomName();
+            final String name = NameCreator.randomName();
 
             // Iterator 패턴을 사용함으로써 구체적인 구현을 분리시킬 수 있다. ex) Map, List
             if (!Objects.isNull(aggregate) && !Objects.isNull(aggregate.iterator())) {

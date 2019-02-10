@@ -8,6 +8,7 @@ import com.sjb.common.model.CommandType;
  */
 public class CommandFactory extends Factory {
     private static final CommandFactory INSTANCE = new CommandFactory();
+
     private CommandFactory() {
         if (INSTANCE != null) {
             throw new RuntimeException("중복 생성");
@@ -33,6 +34,8 @@ public class CommandFactory extends Factory {
                 return new AnalysisSearch();
             case REALTIME_DATA_SEARCH:
                 return new RealTimeSearch();
+            case PROCESSING_DATA:
+                return new ProcessingData();
             default:
                 return null;
         }
