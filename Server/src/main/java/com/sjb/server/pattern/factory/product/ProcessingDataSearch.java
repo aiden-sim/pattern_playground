@@ -1,8 +1,6 @@
 package com.sjb.server.pattern.factory.product;
 
 import com.sjb.server.model.DetailUserInfo;
-import com.sjb.server.pattern.adapter.Print;
-import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.bridge.abstraction.MobileProgrammer;
 import com.sjb.server.pattern.bridge.abstraction.Programmer;
 import com.sjb.server.pattern.bridge.abstraction.SystemProgrammer;
@@ -10,9 +8,6 @@ import com.sjb.server.pattern.bridge.abstraction.WebProgrammer;
 import com.sjb.server.pattern.bridge.implementor.Linux;
 import com.sjb.server.pattern.bridge.implementor.Mac;
 import com.sjb.server.pattern.bridge.implementor.Window;
-import com.sjb.server.pattern.strategy.strategy.Html;
-import com.sjb.server.pattern.strategy.strategy.Java;
-import com.sjb.server.pattern.strategy.strategy.ObjectC;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.time.LocalDateTime;
