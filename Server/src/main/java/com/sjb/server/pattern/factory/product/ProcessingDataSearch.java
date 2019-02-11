@@ -8,9 +8,11 @@ import com.sjb.server.pattern.bridge.abstraction.WebProgrammer;
 import com.sjb.server.pattern.bridge.implementor.Linux;
 import com.sjb.server.pattern.bridge.implementor.Mac;
 import com.sjb.server.pattern.bridge.implementor.Window;
+import com.sjb.server.pattern.state.context.Context;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -31,7 +33,19 @@ public class ProcessingDataSearch extends Product {
 				 */
 				Programmer programmer = getProgrammer(userInfo);
 				programmer.useOs();
+
+				/**
+				 * Strage 패턴을 이용해 프로그래머별 스킬 구현(다른 알고리즘)
+				 */
 				programmer.getSkill();
+
+				/**
+				 * State 패턴을 이용해서 현재 근무 상태 확인
+				 */
+				LocalTime currentTime = LocalTime.now();
+				Context context = new Context();
+				context.changed(currentTime.getHour());
+				context.action();
 			});
 		}
 	}
