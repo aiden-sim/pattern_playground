@@ -1,4 +1,4 @@
+com\sjb\server\pattern\adapter\Log.class
 com\sjb\server\pattern\adapter\Print.class
 com\sjb\server\socket\PlaygroundServer.class
-com\sjb\server\pattern\adapter\Log.class
 com\sjb\server\socket\ServerThread.class

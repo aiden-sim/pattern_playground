@@ -15,13 +15,10 @@ import com.sjb.server.pattern.strategy.strategy.ProgramSkill;
 public abstract class Programmer {
 	protected final Computer computer;
 	protected ProgramSkill skill;
+	protected String name;
 
-	public Programmer(Computer computer, String log) {
+	public Programmer(Computer computer) {
 		this.computer = computer;
-
-		// log
-		Print print = PrintLog.newInstance(log);
-		print.printWithSout();
 	}
 
 	public abstract void useOs();
