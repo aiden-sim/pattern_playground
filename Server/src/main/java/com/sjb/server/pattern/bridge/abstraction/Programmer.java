@@ -11,6 +11,8 @@ import com.sjb.server.pattern.strategy.strategy.ProgramSkill;
  * 기능 클래스
  * <p>
  * Strategy 패턴 (Context)
+ * <p>
+ * Composite 패턴 (Component)
  */
 public abstract class Programmer {
 	protected final Computer computer;
@@ -22,6 +24,8 @@ public abstract class Programmer {
 	}
 
 	public abstract void useOs();
+	// composite
+	public abstract int getPrice();
 
 	public void getSkill() {
 		Print print = PrintLog.newInstance(skill.getSkill() + " use");

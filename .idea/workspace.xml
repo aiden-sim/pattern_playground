@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dea3fc5-4b62-4bf9-b6de-1f523e71be53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/context/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Leave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Rest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Work.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/None.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/composite/ProgrammerManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Server/target/" />
     <ignored path="$PROJECT_DIR$/Client/target/" />
@@ -83,23 +85,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="2708" />
+          <entry key="java" value="3329" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2708" />
+          <entry key="JAVA" value="3329" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="138" />
+          <entry key="java" value="185" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="138" />
+          <entry key="JAVA" value="185" />
         </counts>
       </usages-collector>
     </session>
@@ -107,23 +109,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/ServerThread.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="342">
+              <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding>
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#606#607#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state relative-caret-position="264">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,22 +133,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+              <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,10 +145,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ProgramSkill.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="323">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/PrintLog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="289">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
                 <element signature="e#231#232#0" expanded="true" />
@@ -180,27 +172,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/context/Context.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/AnalysisSearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Work.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,23 +184,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Leave.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="240">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/State.java">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/composite/ProgrammerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -266,6 +261,8 @@
       <find>thro</find>
       <find>case</find>
       <find>if</find>
+      <find>switch</find>
+      <find>iLog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -274,8 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/RealTime.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/utility/NameCreator.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/PrintCommand.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/PrintLog.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/Log.java" />
@@ -294,7 +289,6 @@
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/Program.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/ProcessingDataStore.java" />
         <option value="$PROJECT_DIR$/Common/src/main/java/com/sjb/common/model/CommandType.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/ServerThread.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/CommandFactory.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/AnalysisStore.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/RealTimeStore.java" />
@@ -303,7 +297,6 @@
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/Computer.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/Programmer.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/creator/Factory.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Computer.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/DetailUserInfo.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Linux.java" />
@@ -312,10 +305,6 @@
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Objectc.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ProgramSkill.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Csharp.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ObjectC.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Html.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Java.java" />
@@ -324,7 +313,15 @@
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Work.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Rest.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/context/Context.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/None.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/ServerThread.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/composite/ProgrammerManager.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java" />
       </list>
     </option>
   </component>
@@ -461,6 +458,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PatternPlayGround" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PatternPlayGround" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="pattern" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -483,7 +490,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PatternPlayGround" type="b2602c69:ProjectViewProjectNode" />
@@ -494,8 +501,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="creator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PatternPlayGround" type="b2602c69:ProjectViewProjectNode" />
@@ -506,19 +513,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PatternPlayGround" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PatternPlayGround" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PatternPlayGround" type="b2602c69:ProjectViewProjectNode" />
@@ -544,7 +540,7 @@
     <property name="SearchEverywhereHistoryKey" value="Object&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/lang/Object.java&#10;Executors&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;List&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/util/List.java&#10;Iterator&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/util/Iterator.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549890363984" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549894353845" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../intra_tmon_tms_engine" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -554,8 +550,8 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\PatternPlayGround" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sjb.common.pattern.iterator" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sjb.server.pattern.bridge.implementor" />
@@ -563,8 +559,8 @@
       <recent name="com.sjb.server.pattern.factory" />
       <recent name="com.sjb.common.pattern.iterator" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sjb.common.pattern.iterator" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\PatternPlayGround" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -706,18 +702,18 @@
       <workItem from="1548348401059" duration="21000" />
       <workItem from="1549366554688" duration="908000" />
       <workItem from="1549467635869" duration="663000" />
-      <workItem from="1549610132679" duration="15050000" />
+      <workItem from="1549610132679" duration="17219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65611000" />
+    <option name="totallyTimeSpent" value="67780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -726,8 +722,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.20204978" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29750273" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32790446" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3072747" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32790446" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -735,10 +731,10 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32875" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.16178067" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.13137893" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.114072494" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.13859275" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.21125782" />
@@ -754,8 +750,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/time/LocalDateTime.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/Common/src/main/java/com/sjb/common/pattern/iterator/Aggregate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -803,21 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/src.zip!/java/util/function/Function.java" />
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/main/java/com/sjb/common/model/CommandType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -832,23 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/creator/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/AnalysisStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/RealTimeSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -859,42 +822,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/DetailUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Linux.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Mac.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
@@ -921,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/PlaygroundServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -945,81 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/RealTimeStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/creator/CommandFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Java.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Html.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ObjectC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1027,92 +870,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/Log.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Work.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/AnalysisSearch.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/AnalysisStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Rest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="223">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/State.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/context/Context.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/ServerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/PrintLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ProgramSkill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1128,35 +924,245 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Work.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/Rest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/context/Context.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/state/state/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Java.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ObjectC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/ProgramSkill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/strategy/strategy/Html.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/DetailUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/Gender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/model/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/Mac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/implementor/None.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/RealTimeStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/creator/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/creator/CommandFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/PlaygroundServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/socket/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/Programmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/composite/ProgrammerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/AnalysisSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/PrintLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/adapter/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/SystemProgrammer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/WebProgrammer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/factory/product/ProcessingDataSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="342">
+          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/com/sjb/server/pattern/bridge/abstraction/MobileProgrammer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

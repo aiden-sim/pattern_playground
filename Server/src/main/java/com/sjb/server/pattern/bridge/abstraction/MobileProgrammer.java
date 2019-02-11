@@ -10,10 +10,13 @@ import com.sjb.server.pattern.strategy.strategy.ObjectC;
  * RefinedAbstraction(개선된 추상화)의 역할
  * <p>
  * Strategy 패턴 (Context)
+ * <p>
+ * Composite 패턴 (Leaf)
  */
 public class MobileProgrammer extends Programmer {
 	public MobileProgrammer(Computer computer, String name) {
 		super(computer);
+		this.name = name;
 		this.skill = new ObjectC();
 	}
 
@@ -22,5 +25,9 @@ public class MobileProgrammer extends Programmer {
 		Print print = PrintLog.newInstance(name + " is mobile programmer");
 		print.printWithSout();
 		computer.useOs();
+	}
+
+	@Override public int getPrice() {
+		return 3200;
 	}
 }

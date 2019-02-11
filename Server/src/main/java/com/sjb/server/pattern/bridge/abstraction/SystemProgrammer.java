@@ -10,6 +10,8 @@ import com.sjb.server.pattern.strategy.strategy.Java;
  * RefinedAbstraction(개선된 추상화)의 역할
  * <p>
  * Strategy 패턴 (Context)
+ * <p>
+ * Composite 패턴 (Leaf)
  */
 public class SystemProgrammer extends Programmer {
 	public SystemProgrammer(Computer computer, String name) {
@@ -23,5 +25,9 @@ public class SystemProgrammer extends Programmer {
 		Print print = PrintLog.newInstance(name + " is system programmer");
 		print.printWithSout();
 		computer.useOs();
+	}
+
+	@Override public int getPrice() {
+		return 3400;
 	}
 }

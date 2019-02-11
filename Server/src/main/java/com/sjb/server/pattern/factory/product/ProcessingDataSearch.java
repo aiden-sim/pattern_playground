@@ -1,13 +1,17 @@
 package com.sjb.server.pattern.factory.product;
 
 import com.sjb.server.model.DetailUserInfo;
+import com.sjb.server.pattern.adapter.Print;
+import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.bridge.abstraction.MobileProgrammer;
 import com.sjb.server.pattern.bridge.abstraction.Programmer;
 import com.sjb.server.pattern.bridge.abstraction.SystemProgrammer;
 import com.sjb.server.pattern.bridge.abstraction.WebProgrammer;
 import com.sjb.server.pattern.bridge.implementor.Linux;
 import com.sjb.server.pattern.bridge.implementor.Mac;
+import com.sjb.server.pattern.bridge.implementor.None;
 import com.sjb.server.pattern.bridge.implementor.Window;
+import com.sjb.server.pattern.composite.ProgrammerManager;
 import com.sjb.server.pattern.state.context.Context;
 import org.apache.commons.collections4.CollectionUtils;
 
@@ -21,6 +25,9 @@ import java.util.List;
  * ConcreteProduct(구체적인 제품)
  */
 public class ProcessingDataSearch extends Product {
+
+	private ProgrammerManager manager = new ProgrammerManager(new None());
+
 	// 다형성 사용
 	@Override
 	protected void run(String name) {
@@ -47,17 +54,29 @@ public class ProcessingDataSearch extends Product {
 				context.changed(currentTime.getHour());
 				context.action();
 			});
+
+			/**
+			 * Composite 패턴을 이용한 총 연봉
+			 */
+			Print print = PrintLog.newInstance("총 연봉 : " + manager.getPrice());
+			print.printWithSout();
 		}
 	}
 
 	private Programmer getProgrammer(DetailUserInfo userInfo) {
 		switch (userInfo.getProgram()) {
 			case WEB:
-				return new WebProgrammer(new Window(), userInfo.getName());
+				Programmer web = new WebProgrammer(new Window(), userInfo.getName());
+				manager.addProgrammer(web);
+				return web;
 			case MOBILE:
-				return new MobileProgrammer(new Mac(), userInfo.getName());
+				Programmer mobile = new MobileProgrammer(new Mac(), userInfo.getName());
+				manager.addProgrammer(mobile);
+				return mobile;
 			case SYSTEM:
-				return new SystemProgrammer(new Linux(), userInfo.getName());
+				Programmer system = new SystemProgrammer(new Linux(), userInfo.getName());
+				manager.addProgrammer(system);
+				return system;
 			default:
 				return null;
 		}
