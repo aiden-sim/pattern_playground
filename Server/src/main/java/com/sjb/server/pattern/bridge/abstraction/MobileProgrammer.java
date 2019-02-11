@@ -7,6 +7,7 @@ import com.sjb.server.pattern.bridge.implementor.Computer;
 /**
  * Bridge 패턴
  * RefinedAbstraction(개선된 추상화)의 역할
+ *
  */
 public class MobileProgrammer extends Programmer {
     private String name;
