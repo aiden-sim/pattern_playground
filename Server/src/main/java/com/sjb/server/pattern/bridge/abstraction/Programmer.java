@@ -1,5 +1,7 @@
 package com.sjb.server.pattern.bridge.abstraction;
 
+import com.sjb.server.pattern.adapter.Print;
+import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.bridge.implementor.Computer;
 import com.sjb.server.pattern.strategy.strategy.ProgramSkill;
 
@@ -14,20 +16,18 @@ public abstract class Programmer {
 	protected final Computer computer;
 	protected ProgramSkill skill;
 
-	public Programmer(Computer computer) {
+	public Programmer(Computer computer, String log) {
 		this.computer = computer;
+
+		// log
+		Print print = PrintLog.newInstance(log);
+		print.printWithSout();
 	}
 
 	public abstract void useOs();
 
-	public void setSkill(ProgramSkill skill) {
-		this.skill = skill;
-	}
-
-	public String getSkill() {
-		if (skill == null) {
-			return "no skill";
-		}
-		return skill.getSkill();
+	public void getSkill() {
+		Print print = PrintLog.newInstance(skill.getSkill() + " use");
+		print.printWithSout();
 	}
 }

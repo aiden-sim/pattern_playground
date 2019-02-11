@@ -36,24 +36,7 @@ public class ProcessingDataSearch extends Product {
 				 */
 				Programmer programmer = getProgrammer(userInfo);
 				programmer.useOs();
-
-				/**
-				 * 프로그래별 스킬을 Strategy 패턴으로 구현
-				 */
-				if (programmer instanceof WebProgrammer) {
-					programmer.setSkill(new Html());
-				}
-
-				if (programmer instanceof MobileProgrammer) {
-					programmer.setSkill(new ObjectC());
-				}
-
-				if (programmer instanceof SystemProgrammer) {
-					programmer.setSkill(new Java());
-				}
-
-				Print print = PrintLog.newInstance(programmer.getSkill() + " use");
-				print.printWithSout();
+				programmer.getSkill();
 			});
 		}
 	}
