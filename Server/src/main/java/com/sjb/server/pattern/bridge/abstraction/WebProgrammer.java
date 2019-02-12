@@ -4,6 +4,7 @@ import com.sjb.server.pattern.adapter.Print;
 import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.bridge.implementor.Computer;
 import com.sjb.server.pattern.strategy.strategy.Html;
+import com.sjb.server.pattern.visitor.Visitor;
 
 /**
  * Bridge 패턴
@@ -29,5 +30,9 @@ public class WebProgrammer extends Programmer {
 
 	@Override public int getPrice() {
 		return 3300;
+	}
+
+	@Override public void accept(Visitor visitor) {
+		visitor.visit(this);
 	}
 }

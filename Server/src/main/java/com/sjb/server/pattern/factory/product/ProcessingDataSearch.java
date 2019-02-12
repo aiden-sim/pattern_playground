@@ -13,6 +13,7 @@ import com.sjb.server.pattern.bridge.implementor.None;
 import com.sjb.server.pattern.bridge.implementor.Window;
 import com.sjb.server.pattern.composite.ProgrammerManager;
 import com.sjb.server.pattern.state.context.Context;
+import com.sjb.server.pattern.visitor.ConcreteVisitor;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.time.LocalDateTime;
@@ -54,6 +55,10 @@ public class ProcessingDataSearch extends Product {
 				context.changed(currentTime.getHour());
 				context.action();
 			});
+			/**
+			 * Visitor 패턴을 이용한 연봉 통보
+			 */
+			manager.accept(new ConcreteVisitor());
 
 			/**
 			 * Composite 패턴을 이용한 총 연봉

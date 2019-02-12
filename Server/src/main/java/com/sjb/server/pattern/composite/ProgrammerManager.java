@@ -2,12 +2,15 @@ package com.sjb.server.pattern.composite;
 
 import com.sjb.server.pattern.bridge.abstraction.Programmer;
 import com.sjb.server.pattern.bridge.implementor.Computer;
+import com.sjb.server.pattern.visitor.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Composite 패턴 (Composite)
+ * <p>
+ * Visitor 패턴 (ConcreteVisitor)
  */
 public class ProgrammerManager extends Programmer {
 
@@ -26,6 +29,7 @@ public class ProgrammerManager extends Programmer {
 
 	}
 
+	// composite
 	@Override public int getPrice() {
 		int price = 0;
 		for (Programmer programmer : programmerList) {
@@ -33,5 +37,13 @@ public class ProgrammerManager extends Programmer {
 		}
 
 		return price;
+	}
+
+	// visitor
+	@Override public void accept(Visitor visitor) {
+		for (Programmer programmer : programmerList) {
+			programmer.accept(visitor);
+		}
+		//visitor.visit(this);
 	}
 }

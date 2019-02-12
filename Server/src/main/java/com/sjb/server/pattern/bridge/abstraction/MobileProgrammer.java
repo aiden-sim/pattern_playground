@@ -4,6 +4,7 @@ import com.sjb.server.pattern.adapter.Print;
 import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.bridge.implementor.Computer;
 import com.sjb.server.pattern.strategy.strategy.ObjectC;
+import com.sjb.server.pattern.visitor.Visitor;
 
 /**
  * Bridge 패턴
@@ -12,6 +13,8 @@ import com.sjb.server.pattern.strategy.strategy.ObjectC;
  * Strategy 패턴 (Context)
  * <p>
  * Composite 패턴 (Leaf)
+ * <p>
+ * Visitor 패턴 (ConcreteElement)
  */
 public class MobileProgrammer extends Programmer {
 	public MobileProgrammer(Computer computer, String name) {
@@ -29,5 +32,9 @@ public class MobileProgrammer extends Programmer {
 
 	@Override public int getPrice() {
 		return 3200;
+	}
+
+	@Override public void accept(Visitor visitor) {
+		visitor.visit(this);
 	}
 }
