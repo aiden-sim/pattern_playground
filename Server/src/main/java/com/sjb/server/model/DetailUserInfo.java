@@ -7,74 +7,86 @@ import java.time.LocalDateTime;
  * UserInfo를 근간으로 좀더 구체적인 유저 정보를 생성한다.
  */
 public class DetailUserInfo {
-    private String name;
-    private int age;
-    private LocalDateTime createDt;
-    private Gender gender;
-    private Program program;
+	private String name;
+	private int age;
+	private LocalDateTime createDt;
+	private Gender gender;
+	private Program program;
+	private Rank rank;
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getAge() {
-        return age;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public LocalDateTime getCreateDt() {
-        return createDt;
-    }
+	public LocalDateTime getCreateDt() {
+		return createDt;
+	}
 
-    public Gender getGender() {
-        return gender;
-    }
+	public Gender getGender() {
+		return gender;
+	}
 
-    public Program getProgram() {
-        return program;
-    }
+	public Program getProgram() {
+		return program;
+	}
 
-    public DetailUserInfo(UserInfoBuilder builder) {
-        this.name = builder.name;
-        this.age = builder.age;
-        this.createDt = builder.createDt;
-        this.gender = builder.gender;
-        this.program = builder.program;
-    }
+	public Rank getRank() {
+		return rank;
+	}
 
-    public static class UserInfoBuilder {
-        private String name;
-        private int age;
-        private LocalDateTime createDt;
-        private Gender gender;
-        private Program program;
+	public DetailUserInfo(UserInfoBuilder builder) {
+		this.name = builder.name;
+		this.age = builder.age;
+		this.createDt = builder.createDt;
+		this.gender = builder.gender;
+		this.program = builder.program;
+		this.rank = builder.rank;
+	}
 
-        public UserInfoBuilder setName(String name) {
-            this.name = name;
-            return this;
-        }
+	public static class UserInfoBuilder {
+		private String name;
+		private int age;
+		private LocalDateTime createDt;
+		private Gender gender;
+		private Program program;
+		private Rank rank;
 
-        public UserInfoBuilder setAge(int age) {
-            this.age = age;
-            return this;
-        }
+		public UserInfoBuilder setName(String name) {
+			this.name = name;
+			return this;
+		}
 
-        public UserInfoBuilder setCreateDt(LocalDateTime createDt) {
-            this.createDt = createDt;
-            return this;
-        }
+		public UserInfoBuilder setAge(int age) {
+			this.age = age;
+			return this;
+		}
 
-        public UserInfoBuilder setGender(Gender gender) {
-            this.gender = gender;
-            return this;
-        }
+		public UserInfoBuilder setCreateDt(LocalDateTime createDt) {
+			this.createDt = createDt;
+			return this;
+		}
 
-        public UserInfoBuilder setProgram(Program program) {
-            this.program = program;
-            return this;
-        }
+		public UserInfoBuilder setGender(Gender gender) {
+			this.gender = gender;
+			return this;
+		}
 
-        public DetailUserInfo build() {
-            return new DetailUserInfo(this);
-        }
-    }
+		public UserInfoBuilder setProgram(Program program) {
+			this.program = program;
+			return this;
+		}
+
+		public UserInfoBuilder setRank(Rank rank) {
+			this.rank = rank;
+			return this;
+		}
+
+		public DetailUserInfo build() {
+			return new DetailUserInfo(this);
+		}
+	}
 }

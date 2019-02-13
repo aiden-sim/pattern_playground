@@ -11,6 +11,7 @@ import com.sjb.server.pattern.bridge.implementor.Linux;
 import com.sjb.server.pattern.bridge.implementor.Mac;
 import com.sjb.server.pattern.bridge.implementor.None;
 import com.sjb.server.pattern.bridge.implementor.Window;
+import com.sjb.server.pattern.chain.ChainClient;
 import com.sjb.server.pattern.composite.ProgrammerManager;
 import com.sjb.server.pattern.state.context.Context;
 import com.sjb.server.pattern.visitor.ConcreteVisitor;
@@ -28,6 +29,7 @@ import java.util.List;
 public class ProcessingDataSearch extends Product {
 
 	private ProgrammerManager manager = new ProgrammerManager(new None());
+	private ChainClient chain = new ChainClient();
 
 	// 다형성 사용
 	@Override
@@ -54,6 +56,12 @@ public class ProcessingDataSearch extends Product {
 				Context context = new Context();
 				context.changed(currentTime.getHour());
 				context.action();
+
+				/**
+				 *  Chain of Responsibility 패턴을 이용한 직급에 따른 인센티브 통보
+				 */
+				chain.execute(name, userInfo.getRank());
+
 			});
 			/**
 			 * Visitor 패턴을 이용한 연봉 통보
