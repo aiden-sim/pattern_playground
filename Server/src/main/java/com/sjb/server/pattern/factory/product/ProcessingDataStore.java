@@ -3,8 +3,6 @@ package com.sjb.server.pattern.factory.product;
 import com.sjb.server.model.*;
 import org.apache.commons.collections4.CollectionUtils;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +18,7 @@ public class ProcessingDataStore extends Product {
 
 	// 다형성 사용
 	@Override
-	protected void run(String name) {
-		String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+	protected void run(String name, String nowDt) {
 		List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
 		if (CollectionUtils.isNotEmpty(userInfoList)) {
 			userInfoList.forEach(userInfo -> {

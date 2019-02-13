@@ -21,7 +21,7 @@ public abstract class Product {
 	protected static Map<String, LongAdder> analysisDatabase = new ConcurrentHashMap<>();
 	protected static Map<String, List<DetailUserInfo>> processingDatabase = new ConcurrentHashMap<>();
 
-	protected abstract void run(String name);
+	protected abstract void run(String name, String nowDt);
 
 	/**
 	 * Adapter 패턴 사용
@@ -36,8 +36,8 @@ public abstract class Product {
 	/**
 	 * Teamplte Method 패턴
 	 */
-	public final void execute(CommandType commandType, String name) {
+	public final void execute(CommandType commandType, String name, String nowDt) {
 		log(commandType);
-		run(name);
+		run(name, nowDt);
 	}
 }

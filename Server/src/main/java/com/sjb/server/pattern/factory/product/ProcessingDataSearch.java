@@ -17,9 +17,7 @@ import com.sjb.server.pattern.state.context.Context;
 import com.sjb.server.pattern.visitor.ConcreteVisitor;
 import org.apache.commons.collections4.CollectionUtils;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -33,8 +31,7 @@ public class ProcessingDataSearch extends Product {
 
 	// 다형성 사용
 	@Override
-	protected void run(String name) {
-		String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+	protected void run(String name, String nowDt) {
 		List<DetailUserInfo> userInfoList = processingDatabase.get(nowDt);
 		if (CollectionUtils.isNotEmpty(userInfoList)) {
 			userInfoList.forEach(userInfo -> {

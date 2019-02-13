@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.LongAdder;
 public class AnalysisStore extends Product {
     // 다형성 사용
     @Override
-    protected void run(String name) {
-        analysisDatabase.computeIfAbsent(name, x -> new LongAdder()).increment();
+    protected void run(String name, String nowDt) {
+        analysisDatabase.computeIfAbsent(nowDt, x -> new LongAdder()).increment();
         Print print = PrintLog.newInstance("analysis store : "  + name);
         print.printWithSout();
     }

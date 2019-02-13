@@ -10,6 +10,8 @@ import com.sjb.server.utility.NameCreator;
 
 import java.io.*;
 import java.net.Socket;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class ServerThread extends Thread {
@@ -33,6 +35,7 @@ public class ServerThread extends Thread {
             // Iterator 패턴을 사용함으로써 구체적인 구현을 분리시킬 수 있다. ex) Map, List
             if (!Objects.isNull(aggregate) && !Objects.isNull(aggregate.iterator())) {
                 Iterator iterator = aggregate.iterator();
+                String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
                 while (iterator.hasNext()) {
                     Command command = (Command) iterator.next();
                     /**
@@ -45,7 +48,7 @@ public class ServerThread extends Thread {
                      */
                     Product product = factory.create(command.getCommandType());
                     if (!Objects.isNull(product)) {
-                        product.execute(command.getCommandType(), name);
+                        product.execute(command.getCommandType(), name, nowDt);
                     }
                 }
             }

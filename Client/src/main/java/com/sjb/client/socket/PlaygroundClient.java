@@ -21,13 +21,14 @@ public class PlaygroundClient {
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
              BufferedReader bufferReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         ) {
-            CommandAggregate aggregate = new CommandAggregate(6);
+            CommandAggregate aggregate = new CommandAggregate(7);
             aggregate.appendCommand(new Command(CommandType.REALTIME_DATA_STORE));
             aggregate.appendCommand(new Command(CommandType.ANALYSIS_DATA_STORE));
             aggregate.appendCommand(new Command(CommandType.REALTIME_DATA_SEARCH));
             aggregate.appendCommand(new Command(CommandType.ANALYSIS_DATA_SEARCH));
             aggregate.appendCommand(new Command(CommandType.PROCESSING_DATA_STORE));
             aggregate.appendCommand(new Command(CommandType.PROCESSING_DATA_SERACH));
+            aggregate.appendCommand(new Command(CommandType.TOTAL_DATA_SEARCH));
 
             objectOutputStream.writeObject(aggregate);
             objectOutputStream.flush();
