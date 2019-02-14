@@ -29,10 +29,10 @@ public class CommandFactory extends Factory {
 		switch (commandType) {
 			case ANALYSIS_DATA_STORE:
 				return new AnalysisStore();
-			case REALTIME_DATA_STORE:
-				return new RealTimeStore();
 			case ANALYSIS_DATA_SEARCH:
 				return new AnalysisSearch();
+			case REALTIME_DATA_STORE:
+				return new RealTimeStore();
 			case REALTIME_DATA_SEARCH:
 				return new RealTimeSearch();
 			case PROCESSING_DATA_STORE:

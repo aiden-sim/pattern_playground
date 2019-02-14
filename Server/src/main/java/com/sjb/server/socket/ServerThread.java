@@ -35,7 +35,7 @@ public class ServerThread extends Thread {
             // Iterator 패턴을 사용함으로써 구체적인 구현을 분리시킬 수 있다. ex) Map, List
             if (!Objects.isNull(aggregate) && !Objects.isNull(aggregate.iterator())) {
                 Iterator iterator = aggregate.iterator();
-                String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                String nowDt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
                 while (iterator.hasNext()) {
                     Command command = (Command) iterator.next();
                     /**

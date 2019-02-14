@@ -6,6 +6,8 @@ import com.sjb.server.pattern.adapter.PrintLog;
 import com.sjb.server.pattern.decorator.RealUserName;
 import com.sjb.server.pattern.decorator.RespectUserName;
 import com.sjb.server.pattern.decorator.UserName;
+import com.sjb.server.pattern.mediator.ChatMediator;
+import com.sjb.server.pattern.mediator.User;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
@@ -18,6 +20,7 @@ public class RealTimeSearch extends Product {
     // 다형성 사용
     @Override
     protected void run(String name, String nowDt) {
+        ChatMediator chatMediator = new ChatMediator();
         List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
         if (CollectionUtils.isNotEmpty(userInfoList)) {
             userInfoList.forEach(userInfo -> {
@@ -38,6 +41,12 @@ public class RealTimeSearch extends Product {
                 } catch (CloneNotSupportedException e) {
                     e.printStackTrace();
                 }
+
+                /**
+                 * Mediator 패턴 (전체 공지)
+                 */
+                chatMediator.appendUser(new User(chatMediator, userInfo.getName()));
+                chatMediator.notice("안뇽하세요");
             });
         }
     }
