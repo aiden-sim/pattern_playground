@@ -19,7 +19,7 @@ public class ProcessingDataStore extends Product {
 	// 다형성 사용
 	@Override
 	protected void run(String name, String nowDt) {
-		List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
+		List<UserInfo> userInfoList = getRealtimeDatabase(nowDt);
 		if (CollectionUtils.isNotEmpty(userInfoList)) {
 			userInfoList.forEach(userInfo -> {
 				/**

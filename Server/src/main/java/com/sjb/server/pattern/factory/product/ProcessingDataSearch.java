@@ -32,7 +32,7 @@ public class ProcessingDataSearch extends Product {
 	// 다형성 사용
 	@Override
 	protected void run(String name, String nowDt) {
-		List<DetailUserInfo> userInfoList = processingDatabase.get(nowDt);
+		List<DetailUserInfo> userInfoList = getProcessingDatabase(nowDt);
 		if (CollectionUtils.isNotEmpty(userInfoList)) {
 			userInfoList.forEach(userInfo -> {
 				/**

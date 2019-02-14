@@ -25,7 +25,7 @@ public class RealTimeSearch extends Product {
     @Override
     protected void run(String name, String nowDt) {
         ChatMediator chatMediator = new ChatMediator();
-        List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
+        List<UserInfo> userInfoList = getRealtimeDatabase(nowDt);
         if (CollectionUtils.isNotEmpty(userInfoList)) {
             userInfoList.forEach(userInfo -> {
                 /**

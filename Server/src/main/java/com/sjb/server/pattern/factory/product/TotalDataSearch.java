@@ -39,7 +39,7 @@ public class TotalDataSearch extends Product {
 	 * 유저 이름 가지고 옴
 	 */
 	private String getUserName(String name, String nowDt) {
-		List<UserInfo> userInfoList = realtimeDatabase.get(nowDt);
+		List<UserInfo> userInfoList = getRealtimeDatabase(nowDt);
 		return userInfoList.stream()
 				.filter(info -> info.getName().equals(name))
 				.map(UserInfo::getName)
@@ -52,7 +52,7 @@ public class TotalDataSearch extends Product {
 	 * 총 유저 수 가지고 옴
 	 */
 	private Long getUserCount(String nowDt) {
-		LongAdder result = analysisDatabase.get(nowDt);
+		LongAdder result = getAnalysisDatabase(nowDt);
 		return result.longValue();
 	}
 
@@ -61,7 +61,7 @@ public class TotalDataSearch extends Product {
 	 * 직급 가지고 옴
 	 */
 	private Rank getUserRank(String name, String nowDt) {
-		List<DetailUserInfo> userInfoList = processingDatabase.get(nowDt);
+		List<DetailUserInfo> userInfoList = getProcessingDatabase(nowDt);
 		return userInfoList.stream()
 				.filter(info -> info.getName().equals(name))
 				.map(DetailUserInfo::getRank)

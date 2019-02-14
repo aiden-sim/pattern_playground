@@ -13,7 +13,7 @@ public class AnalysisSearch extends Product {
 	// 다형성 사용
 	@Override
 	protected void run(String name, String nowDt) {
-		LongAdder result = analysisDatabase.get(nowDt);
+		LongAdder result = getAnalysisDatabase(nowDt);
 		if (result != null) {
 			final String log = nowDt + "_" + result.sum();
 			Print print = PrintLog.newInstance(log);

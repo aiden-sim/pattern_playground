@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 /**
  * Prototype 패턴 (Cloneable)
+ *
+ * Flyweight 패턴 - Flyweight(플라이급)의 역할
  */
 public class UserInfo implements Cloneable {
     private String name;
