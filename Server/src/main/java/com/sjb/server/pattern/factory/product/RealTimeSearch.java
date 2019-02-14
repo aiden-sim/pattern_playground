@@ -8,6 +8,10 @@ import com.sjb.server.pattern.decorator.RespectUserName;
 import com.sjb.server.pattern.decorator.UserName;
 import com.sjb.server.pattern.mediator.ChatMediator;
 import com.sjb.server.pattern.mediator.User;
+import com.sjb.server.pattern.observer.ConcreteSubject;
+import com.sjb.server.pattern.observer.Observer;
+import com.sjb.server.pattern.observer.SalaryObserver;
+import com.sjb.server.pattern.observer.Subject;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
@@ -48,6 +52,14 @@ public class RealTimeSearch extends Product {
                 chatMediator.appendUser(new User(chatMediator, userInfo.getName()));
                 chatMediator.notice("안뇽하세요");
             });
+
+            /**
+             * Observer (월급 지급하기)
+             */
+            Subject subject = new ConcreteSubject(userInfoList);
+            Observer observer = new SalaryObserver();
+            subject.addObserver(observer);
+            subject.execute();
         }
     }
 }
