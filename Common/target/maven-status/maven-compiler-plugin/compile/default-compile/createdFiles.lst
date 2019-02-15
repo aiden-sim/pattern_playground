@@ -1,6 +1,6 @@
 com\sjb\common\pattern\iterator\Iterator.class
 com\sjb\common\pattern\iterator\CommandAggregate.class
-com\sjb\common\model\Command.class
-com\sjb\common\model\CommandType.class
 com\sjb\common\pattern\iterator\Aggregate.class
+com\sjb\common\pattern\command\command\Command.class
+com\sjb\common\pattern\command\receiver\CommandType.class
 com\sjb\common\pattern\iterator\CommandIterator.class

@@ -1,7 +1,7 @@
 package com.sjb.client.socket;
 
-import com.sjb.common.model.Command;
-import com.sjb.common.model.CommandType;
+import com.sjb.common.pattern.command.command.Command;
+import com.sjb.common.pattern.command.receiver.CommandType;
 import com.sjb.common.pattern.iterator.CommandAggregate;
 
 import java.io.BufferedReader;
@@ -23,9 +23,9 @@ public class PlaygroundClient {
 			CommandAggregate aggregate = new CommandAggregate(7);
 			aggregate.appendCommand(new Command(CommandType.REALTIME_DATA_STORE));
 			aggregate.appendCommand(new Command(CommandType.ANALYSIS_DATA_STORE));
+			aggregate.appendCommand(new Command(CommandType.PROCESSING_DATA_STORE));
 			aggregate.appendCommand(new Command(CommandType.REALTIME_DATA_SEARCH));
 			aggregate.appendCommand(new Command(CommandType.ANALYSIS_DATA_SEARCH));
-			aggregate.appendCommand(new Command(CommandType.PROCESSING_DATA_STORE));
 			aggregate.appendCommand(new Command(CommandType.PROCESSING_DATA_SERACH));
 			aggregate.appendCommand(new Command(CommandType.TOTAL_DATA_SEARCH));
 
@@ -34,6 +34,7 @@ public class PlaygroundClient {
 
 			String returnMessage = bufferReader.readLine();
 			System.out.println("return Message : " + returnMessage);
+
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

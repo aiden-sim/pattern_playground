@@ -1,6 +1,6 @@
 package com.sjb.server.socket;
 
-import com.sjb.common.model.Command;
+import com.sjb.common.pattern.command.command.Command;
 import com.sjb.common.pattern.iterator.CommandAggregate;
 import com.sjb.common.pattern.iterator.Iterator;
 import com.sjb.server.pattern.factory.creator.CommandFactory;

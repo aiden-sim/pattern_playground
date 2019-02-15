@@ -1,6 +1,6 @@
 package com.sjb.server.pattern.factory.product;
 
-import com.sjb.common.model.CommandType;
+import com.sjb.common.pattern.command.receiver.CommandType;
 import com.sjb.server.model.DetailUserInfo;
 import com.sjb.server.model.UserInfo;
 import com.sjb.server.pattern.adapter.Print;

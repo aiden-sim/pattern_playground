@@ -1,5 +1,8 @@
-package com.sjb.common.model;
+package com.sjb.common.pattern.command.receiver;
 
+/**
+ * Command 패턴 (Receiver)
+ */
 public enum CommandType {
 	REALTIME_DATA_STORE("realtime data store", "실시간 데이터 저장"),
 	ANALYSIS_DATA_STORE("analysis data store", "통계성 데이터 저장"),
@@ -15,6 +18,10 @@ public enum CommandType {
 	CommandType(String name, String desc) {
 		this.name = name;
 		this.desc = desc;
+	}
+
+	public CommandType getCommandType() {
+		return this;
 	}
 
 	public String getName() {

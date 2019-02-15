@@ -1,6 +1,6 @@
 package com.sjb.common.pattern.iterator;
 
-import com.sjb.common.model.Command;
+import com.sjb.common.pattern.command.command.Command;
 
 /**
  * Iterator 패턴
