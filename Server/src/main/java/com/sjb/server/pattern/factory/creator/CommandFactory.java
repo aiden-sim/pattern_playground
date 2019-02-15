@@ -6,8 +6,12 @@ import com.sjb.server.pattern.factory.product.*;
 /**
  * Factory Method 패턴
  * ConcreteCreator(구체적인 작성자)
+ * <p>
+ * Proxy 패턴(Proxy)
  */
 public class CommandFactory extends Factory {
+	private RealFactory realFactory;
+
 	private static final CommandFactory INSTANCE = new CommandFactory();
 
 	private CommandFactory() {
@@ -27,22 +31,21 @@ public class CommandFactory extends Factory {
 	@Override
 	public Product create(CommandType commandType) {
 		switch (commandType) {
-			case ANALYSIS_DATA_STORE:
-				return new AnalysisStore();
 			case ANALYSIS_DATA_SEARCH:
 				return new AnalysisSearch();
-			case REALTIME_DATA_STORE:
-				return new RealTimeStore();
 			case REALTIME_DATA_SEARCH:
 				return new RealTimeSearch();
-			case PROCESSING_DATA_STORE:
-				return new ProcessingDataStore();
 			case PROCESSING_DATA_SERACH:
 				return new ProcessingDataSearch();
 			case TOTAL_DATA_SEARCH:
 				return new TotalDataSearch();
 			default:
-				return null;
+				// Store 부분은 RealSbuject로 조회
+				// Lazy Loading
+				if (realFactory == null) {
+					realFactory = new RealFactory();
+				}
+				return realFactory.create(commandType);
 		}
 	}
 }
