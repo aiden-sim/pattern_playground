@@ -16,10 +16,4 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="ScalaSbtSettings">
-    <option name="customLauncherEnabled" value="true" />
-    <option name="customLauncherPath" value="C:\Program Files (x86)\sbt\bin" />
-    <option name="customVMEnabled" value="true" />
-    <option name="customVMPath" value="C:\Program Files\Java\jdk1.8.0_20" />
-  </component>
 </project>
